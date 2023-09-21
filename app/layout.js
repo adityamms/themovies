@@ -15,10 +15,10 @@ register();
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "THE MOVIES LIST",
-  description: "Sea current trend,poppular movie",
-};
+// export const metadata = {
+//   title: "THE MOVIES LIST",
+//   description: "Sea current trend,poppular movie",
+// };
 
 export const ThemeContext = createContext();
 
