@@ -23,8 +23,14 @@ const inter = Inter({ subsets: ["latin"] });
 export const ThemeContext = createContext();
 
 export default function RootLayout({ children }) {
-  const [theme, setTheme] =
-    useState(JSON.parse(localStorage.getItem("dark"))) || false;
+  const [theme, setTheme] = useState();
+
+  useEffect(() => {
+    // Check if localStorage is available (client-side).
+    if (typeof window !== "undefined") {
+      setTheme(JSON.parse(window.localStorage.getItem("dark") || false));
+    }
+  }, [theme]);
 
   const darkTheme = createTheme({
     palette: {

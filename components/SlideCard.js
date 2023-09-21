@@ -47,7 +47,7 @@ export default function SlideCard({ item }) {
           {item &&
             item.map((data) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={crypto.randomUUID()}>
                   <Swipernya item={data} />
                   <div className=" absolute top-40 md:top-72 overflow-hidden right-0 left-0">
                     <p className=" text-center">

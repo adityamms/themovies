@@ -43,7 +43,10 @@ export default function Cardbox() {
         {data &&
           data.map((item) => {
             return (
-              <div className=" w-40 h-40 md:h-56 rounded-2xl relative mt-20 mb-20 pt-10 md:pt-0">
+              <div
+                className=" w-40 h-40 md:h-56 rounded-2xl relative mt-20 mb-20 pt-10 md:pt-0"
+                key={crypto.randomUUID()}
+              >
                 <Swipernya item={item} />
                 <div className=" absolute top-40 md:top-72 overflow-hidden right-0 left-0">
                   <p className=" text-center">{item.title.substring(0, 36)}</p>

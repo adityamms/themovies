@@ -11,7 +11,7 @@ export default function Navbar({ onClick, chek }) {
           THE MOVIES
         </a>
         <div className="flex gap-5">
-          <Switch onChange={onClick} checked={chek} />
+          <Switch onChange={onClick} checked={chek} defaultChecked={false} />
           <button>LOGIN</button>
           <button>REGISTER</button>
         </div>

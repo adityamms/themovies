@@ -49,8 +49,8 @@ export default function Nowplaying() {
         {upclist &&
           upclist.results.map((item) => {
             return (
-              <SwiperSlide>
-                <Posterbesar data={item} key={crypto.randomUUID} />
+              <SwiperSlide key={crypto.randomUUID()}>
+                <Posterbesar data={item} key={crypto.randomUUID()} />
               </SwiperSlide>
             );
           })}

@@ -10,7 +10,6 @@ import Paginationbar from "@/components/Paginationbar";
 export default function Home() {
   const [data1, setData1] = useState();
   const [data2, setData2] = useState();
-  console.log("data1", data1);
 
   useEffect(() => {
     const axios = require("axios");
