@@ -42,14 +42,14 @@ export default function SlideCard({ item }) {
           spaceBetween={30}
           grabCursor={true}
           modules={[FreeMode, Pagination]}
-          className=" mt-10 h-64 md:h-96 "
+          className=" mt-10 h-72 md:h-96 "
         >
           {item &&
             item.map((data) => {
               return (
                 <SwiperSlide key={crypto.randomUUID()}>
                   <Swipernya item={data} />
-                  <div className=" absolute top-40 md:top-72 overflow-hidden right-0 left-0">
+                  <div className=" absolute top-48 md:top-72 overflow-hidden right-0 left-0">
                     <p className=" text-center">
                       {data.title.substring(0, 30)}
                     </p>
