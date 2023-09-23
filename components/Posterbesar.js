@@ -40,13 +40,15 @@ export default function Posterbesar({ data }) {
     });
   };
 
-  let title = data.title;
+  let title = (data && data.title) || null;
 
   return (
     <>
       <div className="p-5 md:p-10 rounded-sm">
         <img
-          src={`https://image.tmdb.org/t/p/original${data.backdrop_path}`}
+          src={`https://image.tmdb.org/t/p/original${
+            data && data.backdrop_path
+          }`}
           className="w-full h-60 md:h-96  bg-clip-content shadow-md shadow-white"
           onMouseOver={handleMouse}
           onMouseLeave={handleMouseLeave}

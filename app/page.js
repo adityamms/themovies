@@ -5,7 +5,6 @@ import Searchbar from "@/components/Searchbar";
 import Cardbox from "@/components/Cardbox";
 import { useEffect, useState } from "react";
 import Youtoube_View from "@/components/Youtoube_View";
-import Paginationbar from "@/components/Paginationbar";
 
 export default function Home() {
   const [data1, setData1] = useState();

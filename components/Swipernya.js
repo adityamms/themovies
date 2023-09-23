@@ -43,7 +43,7 @@ export default function Swipernya({ item }) {
   };
 
   const handleMore = () => {
-    router.push(`/info?search=${item}`);
+    router.push(`/info?search=${item.id}`);
   };
 
   const handleMouseOver = (e) => {
