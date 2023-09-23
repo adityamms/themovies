@@ -19,7 +19,7 @@ export default function Cardbox() {
     const options = {
       method: "GET",
       url: `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${
-        pageNum || 1 + 1
+        pageNum || 1
       }`,
       headers: {
         accept: "application/json",
