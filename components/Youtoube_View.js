@@ -33,6 +33,9 @@ export default function Youtoube_View({ item }) {
             className="absolute h-1/2 w-3/4 top-0 left-0 right-0 bottom-0 m-auto"
             src={yview.src}
             allowFullScreen={true}
+            allow="fullScreen"
+            gyroscope
+            vr
             id="frame"
           />
         </>
