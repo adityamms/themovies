@@ -16,7 +16,7 @@ register();
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata = {
-//   title: "THE MOVIES LIST",
+//   title: "THE MOVIES",
 //   description: "Sea current trend,poppular movie",
 // };
 

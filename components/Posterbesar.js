@@ -9,6 +9,7 @@ export default function Posterbesar({ data }) {
   const [ishover, setIshover] = useState();
   const { yview, setYview } = useContext(youtoube);
   const [video, setVideo] = useState();
+  const [movieid, setMovieid] = useState();
 
   useEffect(() => {
     data &&
@@ -17,6 +18,7 @@ export default function Posterbesar({ data }) {
           `https://api.themoviedb.org/3/movie/${data.id}?api_key=caa5b24fa309f2b9bc63ce8aa9fd9073&append_to_response=videos`
         )
         .then((data) => {
+          setMovieid(data.data.id);
           setVideo(data.data.videos.results[0]);
         });
   }, []);
@@ -32,9 +34,11 @@ export default function Posterbesar({ data }) {
   const handleClick = () => {
     setYview((prev) => {
       return {
-        src: `https://www.youtube.com/embed/${
-          video ? video.key : "dhbUMr4FR_o"
-        }?&vq=hd720`,
+        src:
+          `https://multiembed.mov/directstream.php?video_id=${movieid}&tmdb=1` ||
+          `https://www.youtube.com/embed/${
+            video ? video.key : "dhbUMr4FR_o"
+          }?&vq=hd720`,
         open: true,
       };
     });
